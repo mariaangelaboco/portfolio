@@ -229,7 +229,7 @@ body {
 @media screen and (max-width: 478px) {
   .overlay h3,
   .overlay p {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 
