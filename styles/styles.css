@@ -1,0 +1,263 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #F6F7F9;
+  color: #222831;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222831;
+}
+
+/* Burger Menu Styles */
+.burger {
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.line {
+  height: 3px;
+  width: 25px;
+  background-color: #222831;
+  margin: 3px 0;
+}
+
+/* Home Section Styles */
+.home {
+  background-color: #F6F7F9;
+  color: #222831;
+  text-align: center;
+  padding-top: 50px;
+  padding: 100px 0;
+}
+
+.avatar {
+  max-width: 100%; /* Set maximum width to 100% of its container */
+  margin: 0 auto; /* Center the avatar horizontally */
+}
+
+.tech-stack .stack-item,
+.contact-icons, .nav-links a, .burger {
+  cursor: pointer;
+}
+
+.stack-item img {
+  width: 26px !important;
+  height: 26px !important;
+  margin-top: 5px;
+}
+
+.stack-item a {
+  color: #222831;
+}
+
+.tech-stack {
+  display: flex; /* Display items in a row */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-top: 20px;
+}
+
+.stack-item {
+  margin: 0 10px; /* Add space between items */
+}
+
+.stack-item img {
+  width: 50px; /* Adjust the size of the icons */
+  height: 50px;
+}
+
+.fa-icon, .svg {
+  font-size: 30px; /* Adjust the size as needed */
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+  background-color: #222831;
+  color: #F6F7F9;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Space between items */
+  justify-items: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.portfolio-item {
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px; /* Add border radius */
+  overflow: hidden; /* Hide any content that might overflow */
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9; /* Adjust to your desired aspect ratio */
+  width: 100%;
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-link {
+  color: #F6F7F9;
+}
+.portfolio-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3,
+.overlay p {
+  margin: 5px;
+}
+
+.overlay .btn {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #F6F7F9;
+  border: 1px solid #F6F7F9;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.overlay .btn:hover {
+  background-color: #F6F7F9;
+  color: #222831;
+}
+
+
+/* Contacts Section Styles */
+.contacts {
+  background-color: #F6F7F9;
+  color: #222831;
+  text-align: center;
+  padding: 100px 0;
+  text-decoration: none;
+}
+
+.section-title {
+  font-size: 55px;
+  margin-bottom: 50px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icons a {
+  display: block;
+  margin: 0 15px;
+  color: #222831;
+  text-decoration: none;
+}
+
+.contact-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+#contacts .remove-style, .footer .remove-style {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #222831;
+  color: #F6F7F9;
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.margin-zero {
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #F6F7F9;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+/* Responsive Styles for portfolio */
+@media screen and (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
