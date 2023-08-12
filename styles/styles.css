@@ -102,10 +102,10 @@ body {
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* Space between items */
+  gap: 7px; /* Space between items */
   justify-items: center;
   align-items: center;
-  margin: 40px;
+  margin: 20px;
 }
 
 .portfolio-item {
@@ -226,6 +226,13 @@ body {
 }
 
 /* Media Queries for Responsive Design */
+@media screen and (min-width: 769px) and (max-width: 1456px) {
+  .overlay h3,
+  .overlay p {
+    font-size: 12px; /* Adjust the font size for mobile */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
@@ -245,6 +252,11 @@ body {
 
   .burger {
     display: flex;
+  }
+
+  .overlay h3,
+  .overlay p {
+    font-size: 15px; /* Adjust the font size for mobile */
   }
 }
 
